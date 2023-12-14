@@ -9,3 +9,4 @@ export default class LeaderBoardController {
       .then(({ status, data }) => res.status(mapStatusHTTP(status)).json(data));
   }
 }
+// trazendo pr da turma passada
