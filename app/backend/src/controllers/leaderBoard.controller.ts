@@ -5,8 +5,8 @@ import mapStatusHTTP from '../utils/mapStatusHTTP';
 export default class LeaderBoardController {
   static getLeaderBoard(req: Request, res: Response): Promise<Response> {
     const param = req.path.split('/')[1];
-    return LeaderBoardService.getAllLeaderBoardHomeOrAway(param)
-      .then(({ status, data }) => res.status(mapStatusHTTP(status)).json(data));
+    return LeaderBoardService.getAllLeaderBoardHomeOrAway(param).then(
+      ({ status, data }) => res.status(mapStatusHTTP(status)).json(data),
+    );
   }
 }
-// trazendo pr da turma passada

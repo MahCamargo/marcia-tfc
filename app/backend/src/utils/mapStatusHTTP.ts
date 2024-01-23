@@ -10,11 +10,11 @@ const httpErrorMap = {
   unprocessableEntity: 422,
 };
 
-const mapStatusHTTP = (status: string): number => {
+const mapStatus = (status: string): number => {
   if (status in httpErrorMap) {
     return httpErrorMap[status as keyof typeof httpErrorMap];
   }
   return 500;
 };
 
-export default mapStatusHTTP;
+export default mapStatus;
